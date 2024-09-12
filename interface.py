@@ -1,5 +1,4 @@
-
-
+import time
 from message import Message
 
 class UserInterface:
@@ -8,7 +7,7 @@ class UserInterface:
         self.message = Message()
 
     def show_commands(self):
-        for key,val in self.commands.items():
+        for key, val in self.commands.items():
             message = key + " - " + val["description"]
             self.message.print(message)
             
@@ -26,5 +25,9 @@ class UserInterface:
         try:
             func = self.commands[command]["callback"]
             return func(args)
+        except BaseException as e:
+            self.message.print(e.message())
+            time.sleep(1)
         except:
-            self.message.print("sorry, that is not a valid command")
+            self.message.print("Sorry, that is not a valid command")
+            time.sleep(1)

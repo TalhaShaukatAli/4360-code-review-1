@@ -9,7 +9,7 @@ class Auth:
     def __init__(self):
         pass
 
-    def login_again(self, username, password):
+    def login(self, username, password):
         with open('db.json', 'r') as file:
             users = json.load(file)['users']
 
@@ -18,11 +18,11 @@ class Auth:
                 if user['password'] == password:
                     accounts = {}
                     for account in user['accounts']:
-                        accounts[account['accountNumber']] = Account(account['balance'])
+                        accounts[account['account_number']] = Account(account['balance'])
                     return User(user['name'], accounts)
                 else:
                     message.print("name or password not found")
-            else:
-                message.print("name or password not found")
+
+        message.print("name or password not found")
             
         return None

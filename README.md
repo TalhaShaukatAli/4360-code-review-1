@@ -4,9 +4,9 @@ Get Started
     - python index.py 
 
 User Interface
-    - deposit [amount] [accountNumber] - deposits the amount (float number) into the accountNumber (integer)
-    - withdraw [amount] [accountNumber] - withdraws the amount (float number) from the accountNumber (integer)
-    - transfer [amount] [fromAccountNumber] [toAccountNumber] - transfers the amount (float number) from the fromAccountNumber (integer) to the toAccountNumber (integer)
+    - deposit [amount] [account_number] - deposits the amount (float number) into the account_number (integer)
+    - withdraw [amount] [account_number] - withdraws the amount (float number) from the account_number (integer)
+    - transfer [amount] [from_account_number] [to_account_number] - transfers the amount (float number) from the from_account_number (integer) to the to_account_number (integer)
 
 
 Requirements
